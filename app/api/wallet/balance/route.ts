@@ -19,7 +19,7 @@ export const POST = async (req: NextRequest) => {
             wallet: true
          }
       })
-      console.log(usrBalance, "userbalance");
+
 
       if (!usrBalance) {
          throw new Error("userBalance not found")

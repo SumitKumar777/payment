@@ -42,7 +42,7 @@ export default function SignUp() {
 				confirm,
 			});
 		
-			console.log(signUser, "signUser");
+
 
 			if (signUser.data) {
 				await signIn("credentials", {

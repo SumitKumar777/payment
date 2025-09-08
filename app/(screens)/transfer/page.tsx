@@ -25,11 +25,10 @@ const Transfer =  () => {
 
 
 	const { data: session } = useSession();
-	console.log(session, "data");
 	let id: string;
 
 	if (session && session.user) {
-		console.log(session.user.id, "session in the onRamp");
+
 		id = session.user.id;
 	}
 
@@ -46,7 +45,7 @@ const Transfer =  () => {
 		if(!bankResponse){
 			console.log("transfer failed  from the bank",bankResponse)
 		}
-		console.log(bankResponse,)
+
 		
 	}
 	const form = useForm<z.infer<typeof phoneTransferFormSchema>>({

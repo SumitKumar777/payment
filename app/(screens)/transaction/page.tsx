@@ -10,7 +10,7 @@ import { getServerSession } from "next-auth";
 
 export default async function Transaction() {
 	const session=await getServerSession(authOptions) ;
-	console.log(session,"session in the transaction");
+
 
 
 

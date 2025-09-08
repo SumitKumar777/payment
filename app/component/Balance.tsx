@@ -6,7 +6,7 @@ const getUserData=async(id:number)=>{
 
    
    try {
-      console.log(id,typeof id,"get user data")
+
 			const usrBalance = await prisma.user.findUnique({
 				where: {
 					id

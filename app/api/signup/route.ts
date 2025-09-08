@@ -28,7 +28,7 @@ export const POST = async (req: NextRequest) => {
          phone: parsedData.data.phone,
          password: parsedData.data.password
       });
-      console.log(createBankUser, "createBankUser");
+
       if (!createBankUser) {
          return NextResponse.json<ApiResponse<null>>({success:false, message: "banksignup failed", data: createBankUser }, { status: 400 })
       }
