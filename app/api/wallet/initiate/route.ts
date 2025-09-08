@@ -28,8 +28,8 @@ export const POST = async (req: NextRequest) => {
          },
       });
 
-
-      const bankResponse = await axios.post("http://localhost:3001/api/transaction/session", {
+      // "http://localhost:3001/api/transaction/session"
+      const bankResponse = await axios.post(`${process.env.NEXT_PUBLIC_BANKSERVER_URL}/api/transaction/session`, {
 
          tranxId: initTransaction.id,
          userId: Number(initTransaction.userId),

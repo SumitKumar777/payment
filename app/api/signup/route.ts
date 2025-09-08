@@ -22,8 +22,9 @@ export const POST = async (req: NextRequest) => {
       if (!parsedData.success) {
          return NextResponse.json({ message: "invalid inputs", error: parsedData.error.message, }, { status: 400 })
       }
-
-      const createBankUser = await axios.post("http://localhost:3001/api/auth/signup", {
+      // "http://localhost:3001/api/auth/signup"
+     
+      const createBankUser = await axios.post(`${process.env.NEXT_PUBLIC_BANKSERVER_URL}/api/auth/signup`, {
          username: parsedData.data.username,
          phone: parsedData.data.phone,
          password: parsedData.data.password
