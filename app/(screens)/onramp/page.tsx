@@ -111,6 +111,7 @@ const OnRamp = () => {
 		};
 
 		const res = await axios.post("/api/wallet/initiate", data);
+		console.log(res,"res fo the bank");
 		window.open(res.data.redirectUrl);
 	}
 
