@@ -41,7 +41,7 @@ export const POST = async (req: NextRequest) => {
          if (balance < BigInt(parsedData.data.amount)) {
             throw new Error("Balance is lower than withdraw request");
          }
-      // http://localhost:3001/api/transaction/withdraw"
+         
          try {
             const addMoneyBank = await axios.post(`${process.env.NEXT_PUBLIC_BANKSERVER_URL}/api/transaction/withdraw`,{
                id:Number(parsedData.data.userId),
